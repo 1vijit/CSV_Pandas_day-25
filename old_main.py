@@ -20,7 +20,7 @@ data_dict = data.to_dict()
 temp_list = data["temp"].to_list()
 
 mon=data[data.day == "Monday"]
-
+print(mon)
 m_temp =9/5 *(int(mon.temp)) +32
 print(f"{m_temp} F")
 
