@@ -24,6 +24,10 @@ while len(guessed_states) <51:
     answer_state = answer_state.title()
     # asd= data[data.state == answer_state].state.item()
     # print(type(asd))
+    if answer_state == "Exit":
+        df = pandas.DataFrame(missing_states)
+        df.to_csv("states_to_learn")
+        break
     for state in all_states:
         if state == answer_state:
             guessed_states.append(state)
@@ -36,6 +40,7 @@ while len(guessed_states) <51:
 
         else:
             missing_states.append(state)
+
 
 
 
