@@ -15,7 +15,6 @@ data = pandas.read_csv("50_states.csv")
 turtle.shape(image)
 game = 1
 all_states = data.state.to_list()
-print(all_states)
 guessed_states = []
 missing_states = []
 
@@ -23,6 +22,8 @@ while len(guessed_states) <51:
     count = len(guessed_states)
     answer_state = screen.textinput(title=f"{count}/50  Guess the State", prompt="What's another state name?")
     answer_state = answer_state.title()
+    # asd= data[data.state == answer_state].state.item()
+    # print(type(asd))
     for state in all_states:
         if state == answer_state:
             guessed_states.append(state)
